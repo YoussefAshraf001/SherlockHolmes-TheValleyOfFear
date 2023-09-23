@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vermissa</title>
+    <link rel="stylesheet type="text/css" href= "styles/style.css">
+</head>
+<body>
+<header>
+    <a href="logo" class="logo">Conan Doyle</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="https://www.biography.com/authors-writers/arthur-conan-doyle" target="_blank" >Biography</a></li>
+        <li><a href="https://www.thriftbooks.com/a/arthur-conan-doyle/202237/" target="_blank" >Work</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Grave_of_Sir_Arthur_Conan_Doyle,_All_Saints_Church,_Minstead_-_geograph.org.uk_-_1036150.jpg" target="_blank" >Burial Location</a></li>
+    </ul>
+</header>
+<section>
+    <img src="assets/stars.png" id="stars">
+    <img src="assets/moon.png" id="moon">
+    <img src="assets/mountains_behind.png" id="mountains_behind">
+    <h2 id="text"> VERMISSA</h2>
+    <a href="https://www.amazon.com/Valley-Fear-Sherlock-Holmes-Novel/dp/3849689913" target="_blank" id="btn">Buy Novel</a>
+    <img src="assets/mountains_front.png" id="mountains_front">
+</section>
+
+<div class="sec" id="sec">
+    <h2>The Valley of Fear</h2>
+    <p>“Holmes flattened out the paper upon his unused plate. I rose and, leaning over him, stared down at the curious inscription, which ran as follows:
+        <br><br>534 C2 13 127 36 31 4 17 21 41 DOUGLAS 109 293 5 37 BIRLSTONE 26 BIRLSTONE 9 47 171<br><br>
+        “What do you make of it, Holmes?”
+        “It is obviously an attempt to convey secret information.”
+        “But what is the use of a cipher message without the cipher?”
+        “In this instance, none at all.”
+        “Why do you say 'in this instance'?”
+        “Because there are many ciphers which I would read as easily as I do the apocrypha of the agony column: such crude devices amuse the intelligence without fatiguing it. But this is different. It is clearly a reference to the words in a page of some book. Until I am told which page and which book I am powerless.”<br><br>
+        “But why 'Douglas' and 'Birlstone'?”<br><br>
+        “Clearly because those are words which were not contained in the page in question.”<br><br>
+        “Then why has he not indicated the book?”<br><br>
+        “Your native shrewdness, my dear Watson, that innate cunning which is the delight of your friends, would surely prevent you from inclosing cipher and message in the same envelope. Should it miscarry, you are undone. As it is, both have to go wrong before any harm comes from it. Our second post is now overdue, and I shall be surprised if it does not bring us either a further letter of explanation, or, as is more probable, the very volume to which these figures refer.”<br><br>
+        Holmes's calculation was fulfilled within a very few minutes by the appearance of Billy, the page, with the very letter which we were expecting.<br><br>
+        “The same writing,” remarked Holmes, as he opened the envelope, “and actually signed,” he added in an exultant voice as he unfolded the epistle. “Come, we are getting on, Watson.” His brow clouded, however, as he glanced over the contents.<br><br>
+        “Dear me, this is very disappointing! I fear, Watson, that all our expectations come to nothing. I trust that the man Porlock will come to no harm.<br><br>
+        “DEAR MR. HOLMES [he says]:
+        <br><br>“I will go no further in this matter. It is too dangerous—he suspects me. I can see that he suspects me. He came to me quite unexpectedly after I had actually addressed this envelope with the intention of sending you the key to the cipher. I was able to cover it up. If he had seen it, it would have gone hard with me. But I read suspicion in his eyes. Please burn the cipher message, which can now be of no use to you.<br><br>
+        “FRED PORLOCK.”</p>
+</div>
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let mountains_front = document.getElementById('mountains_front');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1 + 'px';
+        mountains_behind.style.left = value * 1.25 + 'px';
+        mountains_front.style.bottom = value * 1.25 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        btn.style.marginRight = value * -4 + 'px';
+    })
+
+</script>
+</body>
+</html>
